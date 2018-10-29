@@ -1,0 +1,15 @@
+<form (ngSubmit)='getName()' [formGroup]='filmName'>
+    <label>Enter a Star Wars Film: </label>
+    <input type='text' formControlName='name'>
+    <button>Submit</button>
+</form>
+
+<div *ngIf='film'>
+    <div *ngFor='let one of film.results'>
+        <h2>Episode: {{one.episode_id}}</h2>
+        <h1>{{one.title}}</h1>
+        <h3>Released: {{one.release_date}}</h3>
+        <h3>Director: {{one.director}}</h3>
+        <p>{{one.opening_crawl}}</p>
+    </div>
+</div>

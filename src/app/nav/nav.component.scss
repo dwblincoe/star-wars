@@ -1,0 +1,38 @@
+.container{
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin: 0 auto;
+    padding:1.5em;
+}
+
+header{
+    background:blue;
+    text-transform: uppercase;
+
+    .logo{
+        font-weight: 300;
+        color:white;
+        text-decoration: none;
+    }
+
+    ul{
+        list-style-type: none;
+        justify-self: right;
+        margin:0; padding:0;
+
+        li{
+            float:left;
+        }
+
+        a{
+            padding:1.5em;
+            text-decoration: none;
+            color:white;
+
+            &:hover{
+                background: lightblue;
+            }
+        }
+    }
+
+}

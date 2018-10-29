@@ -1,0 +1,18 @@
+<form (ngSubmit)='getName()' [formGroup]='shipName'>
+    <label>Enter a Star Wars Ship: </label>
+    <input type='text' formControlName='name'>
+    <button>Submit</button>
+</form>
+
+
+<div *ngIf='ship'>
+    <div *ngFor='let one of ship.results'>
+        <h1>{{one.name}}</h1>
+        <h3>Model: {{one.model}}</h3>
+        <h3>Starship Class: {{one.starship_class}}</h3>
+        <h3>No. of Crew: {{one.crew}}</h3>
+        <h3>No. of Passengers: {{one.passengers}}</h3>
+        <h3>Length: {{one.length}}</h3>
+        <h3>Hyperdrive Rating: {{one.hyperdrive_rating}}</h3>
+    </div>
+</div>

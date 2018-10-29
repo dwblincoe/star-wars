@@ -1,0 +1,18 @@
+<form (ngSubmit)='getPeople()' [formGroup]='charName'>
+    <label>Enter a Star Wars Character: </label>
+    <input type='text' formControlName='name'>
+    <button>Submit</button>
+</form>
+
+
+<div *ngIf='character'>
+    <div *ngFor='let one of character.results'>
+        <h1>{{one.name}}</h1>
+        <h3>Birth Year: {{one.birth_year}}</h3>
+        <h3>Gender: {{one.gender}}</h3>
+        <h3>Eye-Color: {{one.eye_color}}</h3>
+        <h3>Hair-Color: {{one.hair_color}}</h3>
+        <h3>Height: {{one.height}}</h3>
+        <h3>Weight: {{one.weight}}</h3>
+    </div>
+</div>
